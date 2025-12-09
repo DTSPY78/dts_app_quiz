@@ -10,6 +10,7 @@ services:
       - mongo-data:/var/lib/mongodb/data
     networks:
       - dts_exam
+    restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: Admin@123$$
@@ -22,6 +23,7 @@ services:
       - sqlserver-data:/var/lib/sqlserver/data
     networks:
       - dts_exam
+    restart: always
     environment:
       ACCEPT_EULA: Y
       SA_PASSWORD: Admin@123$
